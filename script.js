@@ -31,13 +31,14 @@ Car.prototype.getMakeModel = function(){
 // 	}
 	
 // }
+SportsCar.prototype = Object.create(Car.prototype);
+SportsCar.prototype.constructor = SportsCar;
 
 SportsCar.prototype.getTopSpeed = function(){
 		return this.topSpeed;
 	}
 
-SportsCar.prototype = Object.create(Car.prototype);
-SportsCar.prototype.constructor = SportsCar;
+
 
 // Do not change the code below
 window.Car = Car;
